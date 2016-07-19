@@ -10,8 +10,17 @@ class IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
+        $guestbook = new Default_Model_Guestbook();
+        $this->view->entries = $guestbook->fetchAll();
         // action body
     }
+
+    public function demoAction()
+    {
+        // action body
+        die("demo");
+    }
+
 
 
 }
